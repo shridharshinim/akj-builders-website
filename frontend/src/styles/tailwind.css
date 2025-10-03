@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --color-background: #FEFEFE; /* softer-white */
+    --color-foreground: #1E293B; /* slate-800 */
+    --color-border: #E2E8F0; /* slate-200 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #CA8A04; /* yellow-600 */
+    
+    /* Card & Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1E293B; /* slate-800 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1E293B; /* slate-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F1F5F9; /* slate-100 */
+    --color-muted-foreground: #64748B; /* slate-500 */
+    
+    /* Primary Brand Colors */
+    --color-primary: #FFFFFF; /* white */
+    --color-primary-foreground: #1E293B; /* slate-800 */
+    
+    /* Secondary Colors */
+    --color-secondary: #F8FAFC; /* slate-50 */
+    --color-secondary-foreground: #1E293B; /* slate-800 */
+    
+    /* Accent Colors */
+    --color-accent: #CA8A04; /* yellow-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* State Colors */
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #D97706; /* amber-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Additional Brand Colors */
+    --color-surface: #F1F5F9; /* slate-100 */
+    --color-text-primary: #1E293B; /* slate-800 */
+    --color-text-secondary: #64748B; /* slate-500 */
+    --color-gold: #CA8A04; /* yellow-600 */
+    --color-gold-warm: #D4AF37; /* gold */
+    --color-gold-deep: #B45309; /* amber-700 */
+    --color-canvas: #FFFFFF; /* white */
+    --color-text-strong: #0F172A; /* slate-900 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair text-text-primary;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-saira {
+    font-family: 'Saira', sans-serif;
+  }
+}
+
+@layer components {
+  /* Gold Shimmer Animation */
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(202, 138, 4, 0.3), transparent);
+    transition: left 2s ease-in-out;
+  }
+  
+  .gold-shimmer:hover::before {
+    left: 100%;
+  }
+  
+  /* Luxury Card Depth */
+  .luxury-card {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(202, 138, 4, 0.15);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .luxury-card:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.02);
+  }
+  
+  /* Scroll Reveal Animation */
+  .scroll-reveal {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .scroll-reveal.revealed {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  /* Golden Hour Image Treatment */
+  .golden-hour {
+    filter: sepia(0.1) saturate(1.2) brightness(1.05);
+    transition: filter 0.3s ease;
+  }
+  
+  .golden-hour:hover {
+    filter: sepia(0.2) saturate(1.4) brightness(1.1);
+  }
+  
+  /* Luxury Modal Backdrop */
+  .luxury-modal {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .luxury-modal-content {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .luxury-modal-content.open {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  /* Floating Video Container */
+  .floating-video {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .floating-video video {
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Diagonal Wave Transition */
+  .diagonal-wave {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .diagonal-wave:hover {
+    transform: translateY(-20px);
+  }
+}
+
+@layer utilities {
+  /* Golden Ratio Spacing */
+  .space-golden-xs { @apply space-y-2; } /* 8px */
+  .space-golden-sm { @apply space-y-3; } /* 13px */
+  .space-golden-md { @apply space-y-5; } /* 21px */
+  .space-golden-lg { @apply space-y-8; } /* 34px */
+  .space-golden-xl { @apply space-y-14; } /* 55px */
+  
+  /* Text Shadows for Luxury */
+  .text-shadow-luxury {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Gradient Text */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #CA8A04, #D4AF37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Luxury Shadows */
+  .shadow-luxury {
+    box-shadow: 0 4px 6px rgba(202, 138, 4, 0.07), 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadow-luxury-hover {
+    box-shadow: 0 8px 12px rgba(202, 138, 4, 0.15), 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Animation Utilities */
+  .animate-pulse-gold {
+    animation: pulse-gold 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-gold {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(202, 138, 4, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(202, 138, 4, 0);
+    }
+  }
+}
