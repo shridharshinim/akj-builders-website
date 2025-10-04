@@ -101,7 +101,7 @@ const TrustCredentials = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="relative py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

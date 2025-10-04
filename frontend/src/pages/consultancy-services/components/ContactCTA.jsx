@@ -138,7 +138,7 @@ const ContactCTA = ({ onConsultationClick }) => {
           </div>
 
           {/* Visual */}
-          <div className="relative">
+          <div className="relative p-8">
             <div className="relative z-10">
               <div className="bg-white rounded-2xl shadow-luxury p-8">
                 <Image
@@ -171,15 +171,15 @@ const ContactCTA = ({ onConsultationClick }) => {
               </div>
             </div>
 
-            {/* Floating Elements */}
-            <div className="absolute -top-8 -left-8 bg-gold text-white rounded-xl shadow-luxury p-4">
+            {/* Floating Elements - Fixed positioning */}
+            <div className="absolute top-4 left-4 bg-gold text-white rounded-xl shadow-luxury p-4 z-20">
               <div className="text-center">
                 <Icon name="Users" size={24} className="mx-auto mb-2" />
                 <div className="text-xs font-inter font-medium">Expert Team</div>
               </div>
             </div>
 
-            <div className="absolute -bottom-8 -right-8 bg-white rounded-xl shadow-luxury p-4 border border-gold/20">
+            <div className="absolute bottom-4 right-4 bg-white rounded-xl shadow-luxury p-4 border border-gold/20 z-20">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm font-inter font-medium text-text-strong">Available Now</span>
@@ -187,7 +187,7 @@ const ContactCTA = ({ onConsultationClick }) => {
             </div>
 
             {/* Background Pattern */}
-            <div className="absolute inset-0 -z-10 opacity-10">
+            <div className="absolute inset-0 -z-10 opacity-10 pointer-events-none">
               <div className="absolute top-10 right-10 w-20 h-20 border border-gold rounded-full"></div>
               <div className="absolute bottom-20 left-10 w-16 h-16 bg-gold/20 rounded-full"></div>
             </div>

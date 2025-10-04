@@ -26,13 +26,15 @@ I'd appreciate the opportunity to discuss how we can work together to create som
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <HeroSection onConsultationClick={handleWhatsAppConsultation} />
-        <ServicePillars />
-        <PartnershipShowcase />
-        <TechnicalExpertise />
-        <ConsultationProcess onConsultationClick={handleWhatsAppConsultation} />
-        <TrustCredentials />
-        <ContactCTA onConsultationClick={handleWhatsAppConsultation} />
+        <div className="space-y-0">
+          <HeroSection onConsultationClick={handleWhatsAppConsultation} />
+          <ServicePillars />  
+          <PartnershipShowcase />
+          <TechnicalExpertise />
+          <ConsultationProcess onConsultationClick={handleWhatsAppConsultation} />
+          <TrustCredentials />
+          <ContactCTA onConsultationClick={handleWhatsAppConsultation} />
+        </div>
       </main>
       {/* Footer */}
       <footer className="bg-text-strong text-white py-12">
