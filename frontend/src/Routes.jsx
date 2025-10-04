@@ -17,13 +17,13 @@ const Routes = () => {
       <ScrollToTop />
       <RouterRoutes>
         {/* Define your route here */}
-        <Route path="/" element={<AboutExcellence />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/homepage" element={<Homepage />} />
+        <Route path="/about-excellence" element={<AboutExcellence />} />
         <Route path="/projects-gallery" element={<ProjectsGallery />} />
         <Route path="/consultancy-services" element={<ConsultancyServices />} />
         <Route path="/contact-hub" element={<ContactHub />} />
         <Route path="/visual-gallery" element={<VisualGallery />} />
-        <Route path="/about-excellence" element={<AboutExcellence />} />
-        <Route path="/homepage" element={<Homepage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

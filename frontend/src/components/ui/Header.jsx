@@ -9,7 +9,7 @@ const Header = () => {
   const location = useLocation();
 
   const navigationItems = [
-    { name: 'Home', path: '/homepage', icon: 'Home' },
+    { name: 'Home', path: '/', icon: 'Home' },
     { name: 'Projects', path: '/projects-gallery', icon: 'Building2' },
     { name: 'Services', path: '/consultancy-services', icon: 'Briefcase' },
     { name: 'Gallery', path: '/visual-gallery', icon: 'Image' },
@@ -59,7 +59,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20 px-6 lg:px-8">
           {/* Logo */}
           <Link 
-            to="/homepage" 
+            to="/" 
             className="flex items-center space-x-3 group"
             onClick={closeMenu}
           >

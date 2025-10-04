@@ -16,8 +16,8 @@ const Homepage = () => {
         <meta property="og:title" content="AKJ Builders - Luxury Construction Excellence" />
         <meta property="og:description" content="Where vision meets craftsmanship. Discover our signature developments that redefine modern urban lifestyle." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://akjbuilders.com/homepage" />
-        <link rel="canonical" href="https://akjbuilders.com/homepage" />
+        <meta property="og:url" content="https://akjbuilders.com/" />
+        <link rel="canonical" href="https://akjbuilders.com/" />
       </Helmet>
       <div 
         className="min-h-screen homepage-bg" 
